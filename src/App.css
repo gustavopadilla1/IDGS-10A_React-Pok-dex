@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+  height: 100%;
+    background-repeat: no-repeat;
+    background: url("https://us.123rf.com/450wm/benzoix/benzoix1907/benzoix190700483/126971584-resumen-de-lujo-desenfoque-gris-oscuro-y-negro-degradado-utilizado-como-pared-de-estudio-de-fondo-pa.jpg?ver=6") no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none; 
+}
+
+.flex-cotainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.poke-image {
+  height: 35vmin;
+  pointer-events: none;
+  margin: 30px;
+}
+
+.button {
+  margin: 10px;
+  cursor: pointer;
+  width: 13vw;
+  height: 6vh;
+  background-color: mediumblue;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+}
+.text{
+  color: red;
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-contenido{
+  background-color:whitesmoke;
+  width:500px;
+  padding: 10px 10px;
+  margin: 20% auto;
+  position: relative;
+  border-radius: 50px;
+
+}
+.modal{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+.modal-boton-cerrar{
+  margin: 6px;
+  cursor: pointer;
+  width: 15vw;
+  height: 5vh;
+  background-color: red;
+  color: azure;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
