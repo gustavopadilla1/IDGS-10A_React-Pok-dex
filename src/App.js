@@ -32,18 +32,6 @@ function App() {
 
   }
 
-  const abilidades = () => {
-
-
-    // if(pokemon.id === 0){
-    //   button.disabled = false;
-    // }else{
-    //   button.disabled = true;
-    // }
-  }
-
-
-
   useEffect(() => {
     console.log({ pokemon });
     setCurrentPokemonId(pokemon.id);
@@ -52,10 +40,13 @@ function App() {
   }, [pokemon]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="flex-container">
+    <div className="App">    
+      <header className="App-header">    
+      <button className='btn-github'>
+        <a  className='btn-github' href='https://github.com/gustavopadilla1/IDGS-10A_React-Pok-dex.git'>GitHub</a>
+      </button>
 
+        <div className="flex-container">
           <img
             src={pokemon?.sprites?.back_default ?? "https://m.media-amazon.com/images/I/91s3ed2bcdL._SX500_.jpg"}
             className="poke-image"
@@ -67,11 +58,8 @@ function App() {
 
         </div>
 
-
-
         <a className='text'>{pokemon.id ?? ""}</a>
         <a className='text'>{pokemon.name ?? "No Pokemon Selected"}</a>
-
 
         <div className="flex-cotainer">
           <button className="button" onClick={() => fetchPokemon(decrease())}>Back</button>
@@ -105,10 +93,8 @@ function App() {
                <img src={pokemon?.sprites?.back_shiny} />              
                <img src={pokemon?.sprites?.front_default} />
                <img src={pokemon?.sprites?.front_shiny} />
-              
-               
+                            
           </ul>
-
 
           <br></br>
           <button className="modal-boton-cerrar" href="#">
