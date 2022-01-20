@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [pokemon, setPokemon] = useState({});
@@ -33,7 +33,7 @@ function App() {
    console.log({ pokemon });
     setCurrentPokemonId(pokemon.id);
     pokemon?.abilities?.map((ability) => console.log(ability.ability.name));
-    // fetchPokemon(currentPokemonId);    
+     //fetchPokemon(currentPokemonId);    
   }, [pokemon]);
 
   return (
@@ -54,11 +54,9 @@ function App() {
             alt="logo" />
 
         </div>
-
+{/* 
         <a className='text'>{pokemon.id}</a>
-        <a className='text'>
-          {pokemon.name ?? "No Pokemon Selected"}
-          </a>
+        <a className='text'>{pokemon.name ?? "No Pokemon Selected"}</a> */}
         <div className="flex-cotainer">
           <button className="button" onClick={() => fetchPokemon(decrease())}>Back</button>
           <button className="button" onClick={() => fetchPokemon(getRandomInt())}>Random</button>
@@ -74,7 +72,7 @@ function App() {
       <div id="miModal" className="modal">
         <div className="modal-contenido">    
           <h3>{"Nombre:"}</h3>
-          <a className='text'> {pokemon?.name ?? "No Pokemon Selected"}</a>
+          {/* <a className='text'> {pokemon?.name ?? "No Pokemon Selected"}</a> */}
           <h3>{"Abilidades"}</h3>
 
           <ul className='text'>
@@ -86,14 +84,14 @@ function App() {
               ))
            
             }          
-               <img src={pokemon?.sprites?.back_default } />
+               {/* <img src={pokemon?.sprites?.back_default } />
                <img src={pokemon?.sprites?.back_shiny} />              
                <img src={pokemon?.sprites?.front_default} />
-               <img src={pokemon?.sprites?.front_shiny} />               
+               <img src={pokemon?.sprites?.front_shiny} />                */}
           </ul>
 
-          <button className="modal-boton-cerrar" href="#">
-            <a className="modal-boton-cerrar" href="#">Cerrar</a>
+          <button className="modal-boton-cerrar" href="#">Cerrar
+            {/* /* <a className="modal-boton-cerrar" href="#">Cerrar</a> */}
           </button>
         </div>
       </div>
