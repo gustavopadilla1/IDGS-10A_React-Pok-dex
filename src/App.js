@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 
 function App() {
   const [pokemon, setPokemon] = useState({});
-  const [currentPokemonId, setCurrentPokemonId] = useState(0);
-  const button = document.querySelector('button')
+  const [, setCurrentPokemonId] = useState(0);
 
   const fetchPokemon = (id) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -34,7 +33,7 @@ function App() {
    console.log({ pokemon });
     setCurrentPokemonId(pokemon.id);
     pokemon?.abilities?.map((ability) => console.log(ability.ability.name));
-    setCurrentPokemonId(pokemon.id);  
+    // fetchPokemon(currentPokemonId);    
   }, [pokemon]);
 
   return (
@@ -56,9 +55,10 @@ function App() {
 
         </div>
 
-        <a className='text'>{pokemon.id ?? ""}</a>
-        <a className='text'>{pokemon.name ?? "No Pokemon Selected"}</a>
-
+        <a className='text'>{pokemon.id}</a>
+        <a className='text'>
+          {pokemon.name ?? "No Pokemon Selected"}
+          </a>
         <div className="flex-cotainer">
           <button className="button" onClick={() => fetchPokemon(decrease())}>Back</button>
           <button className="button" onClick={() => fetchPokemon(getRandomInt())}>Random</button>
