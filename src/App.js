@@ -28,7 +28,6 @@ function App() {
       pokemon.id = 601;
     }
     return pokemon.id - 1;
-
   }
 
   useEffect(() => { 
@@ -72,7 +71,6 @@ function App() {
         <a href="#miModal" className='button'>Abilidades</a>
       </button>
 
-
       <div id="miModal" className="modal">
         <div className="modal-contenido">    
           <h3>{"Nombre:"}</h3>
@@ -91,8 +89,7 @@ function App() {
                <img src={pokemon?.sprites?.back_default } />
                <img src={pokemon?.sprites?.back_shiny} />              
                <img src={pokemon?.sprites?.front_default} />
-               <img src={pokemon?.sprites?.front_shiny} />
-               
+               <img src={pokemon?.sprites?.front_shiny} />               
           </ul>
 
           <button className="modal-boton-cerrar" href="#">
@@ -101,10 +98,8 @@ function App() {
         </div>
       </div>
     </div>
-
   );
 }
-
 
 export default App;
 
