@@ -42,8 +42,8 @@
 
 .modal-contenido{
   background-color:whitesmoke;
-  width:500px;
-  padding: 10px 10px;
+  width:490px;
+  padding: 9px 9px;
   margin: 20% auto;
   position: relative;
   border-radius: 50px;
@@ -51,13 +51,17 @@
 }
 .modal{
   position:fixed;
-  top:0;
+  margin-top: -150px;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 0%;
+  top: 0;
   right:0;
   bottom:0;
   left:0;
   opacity:0;
   pointer-events:none;
-  transition: all 1s;
+  transition: all 1s;;
 }
 #miModal:target{
   opacity:1;
@@ -66,13 +70,13 @@
 .modal-boton-cerrar{
   margin: 6px;
   cursor: pointer;
-  width: 15vw;
+  width: 10vw;
   height: 5vh;
   background-color: red;
   color: azure;
   border: none;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 50px;
 }
 

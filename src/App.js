@@ -21,7 +21,6 @@ function App() {
       pokemon.id = 0;
     }
     return pokemon.id + 1;
-
   }
 
   const decrease = () => {
@@ -32,11 +31,11 @@ function App() {
 
   }
 
-  useEffect(() => {
-    console.log({ pokemon });
+  useEffect(() => { 
+   console.log({ pokemon });
     setCurrentPokemonId(pokemon.id);
     pokemon?.abilities?.map((ability) => console.log(ability.ability.name));
-    setCurrentPokemonId(pokemon.id);
+    setCurrentPokemonId(pokemon.id);  
   }, [pokemon]);
 
   return (
@@ -68,17 +67,17 @@ function App() {
         </div>
 
       </header>
-  
+      
       <button className='button'>
         <a href="#miModal" className='button'>Abilidades</a>
       </button>
 
-      <div id="miModal" className="modal">
-        <div className="modal-contenido">
 
+      <div id="miModal" className="modal">
+        <div className="modal-contenido">    
           <h3>{"Nombre:"}</h3>
           <a className='text'> {pokemon?.name ?? "No Pokemon Selected"}</a>
-          <h3>Abilidades</h3>
+          <h3>{"Abilidades"}</h3>
 
           <ul className='text'>
             {
@@ -93,17 +92,14 @@ function App() {
                <img src={pokemon?.sprites?.back_shiny} />              
                <img src={pokemon?.sprites?.front_default} />
                <img src={pokemon?.sprites?.front_shiny} />
-                            
+               
           </ul>
 
-          <br></br>
           <button className="modal-boton-cerrar" href="#">
-            <a href="#">Cerrar</a>
+            <a className="modal-boton-cerrar" href="#">Cerrar</a>
           </button>
         </div>
       </div>
-
-
     </div>
 
   );
